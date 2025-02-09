@@ -8,3 +8,7 @@ if st.button("😅 Say hello"):
     st.write("Hello, world!")
 else:
     st.write("Goodbye, world!")
+
+st.latex("
+    $$ n^1 $$
+")
