@@ -13,16 +13,15 @@ st.markdown(
 st.markdown(
     """
     <style>
-    #root > div:nth-child(1) > div > div > div > div > a > img {
-        display: none; /* or visibility: hidden; */
-    }
+    # header {visibility: hidden;}
+    # footer {visibility: hidden;}
     </style>
     """,
     unsafe_allow_html=True,
 )
 # Rest of your Streamlit app code
 
-st.title("😂 Ahixahaaa 123321 ê")
+st.title("😂 Ahixahaaa 1233221 ê")
 
 st.header("st.button")
 
