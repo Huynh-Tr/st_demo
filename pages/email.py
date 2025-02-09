@@ -22,8 +22,9 @@ if st.button("Send Email"):
         st.error(f"Error sending email: {e}")
 
 OTP_check = st.text_input('OTP')
+st.write(OTP_check)
 if OTP_check == OTP:
-    st.write(OTP_check)
+    
     st.write('right')
 # else:
 #     st.write(f'{OTP}')
