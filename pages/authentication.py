@@ -28,5 +28,5 @@ import streamlit as st
 
 import streamlit as st
 
-if st.experimental_user.is_logged_in:
+if st.experimental_user:
     st.write(st.experimental_user)
