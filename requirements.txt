@@ -207,3 +207,4 @@ wrapt==1.16.0
 xgboost==2.0.3
 yfinance==0.2.37
 zipp==3.18.1
+yagmail==0.15.293
