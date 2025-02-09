@@ -11,3 +11,7 @@ else:
 
 
 st.markdown('$$ n_1 = n^1 + 1 $$')
+st.code('''
+    def hello():
+        print('some things')    
+''')
