@@ -9,7 +9,7 @@ hide_github_icon = """
 st.markdown(hide_github_icon, unsafe_allow_html=True)
 
 
-st.title('My first app12')
+st.title('My first app1')
 st.write("Here's our first attempt at using data to create a table:")
 # st.markdown
 # st.header
