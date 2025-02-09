@@ -12,7 +12,7 @@ st.markdown(hide_st_style, unsafe_allow_html=True)
 
 # Rest of your Streamlit app code
 
-st.title("😂 Ahixa")
+st.title("😂 Ahixah")
 
 st.header("st.button")
 
