@@ -10,6 +10,14 @@ hide_github_icon = """
 """
 st.markdown(hide_github_icon, unsafe_allow_html=True)
 
+# Add custom CSS to hide the GitHub icon
+hide_all_icon = """
+#MainMenu {
+  visibility: hidden;
+}
+"""
+st.markdown(hide_all_icon, unsafe_allow_html=True)
+
 st.title('My first app')
 st.write("Here's our first attempt at using data to create a table:")
 # st.markdown
