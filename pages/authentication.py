@@ -26,4 +26,7 @@ import streamlit as st
 #         st.session_state.logged_in = False
 #         st.experimental_rerun()  # Refresh the page
 
-st.write(st.experimental_user)
+import streamlit as st
+
+if st.experimental_user.is_logged_in:
+    st.write(st.experimental_user)
