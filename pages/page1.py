@@ -23,7 +23,7 @@ st.markdown(
 st.markdown(
     """
     <style>
-    #root > div:nth-child(1) > div > div {
+    #root > div:nth-child(1) > div > div > div {
         display: none; /* or visibility: hidden; */
     }
     </style>
