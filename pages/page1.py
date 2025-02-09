@@ -3,14 +3,13 @@ import streamlit as st
 hide_st_style = """ 
 <style>
     #MainMenu{visibility: hidden;}
-    #Githubicon{visibility: hidden;}
 </style>
 """
 st.markdown(hide_st_style, unsafe_allow_html=True) 
 
 # Rest of your Streamlit app code
 
-st.title("😂 Ahixaha")
+st.title("😂 Ahixahaaa")
 
 st.header("st.button")
 
