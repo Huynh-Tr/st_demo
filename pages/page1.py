@@ -13,7 +13,7 @@ st.markdown(
 st.markdown(
     """
     <style>
-    #root > div:nth-child(1) > div > div > button {
+    #root > div:nth-child(1) > div > div > a {
         display: none; /* or visibility: hidden; */
     }
     </style>
