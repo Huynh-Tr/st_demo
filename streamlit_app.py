@@ -57,3 +57,7 @@ st.code('''
 def hello():
     print('Hello, Streamlit!')
 ''')
+
+st.latex(r'''
+    $$n^1$$
+''')
