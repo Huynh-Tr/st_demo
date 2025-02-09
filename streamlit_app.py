@@ -43,16 +43,6 @@ df2 = pd.DataFrame({
     'third column': [100, 200, 300, 400]
     })
 
-# create a plot to show on streamlit
-fig, ax = plt.subplots()
-ax.plot(df2['first column'], df2['second column'])
-st.pyplot(fig)
-
-# create a plot by pandas to show on streamlit
-fig2 = df2.plot(x='third column', y='second column')
-st.pyplot(fig2.figure)
-
-
 # create a table to show on streamlit, with the red header, total row and column blue font
 df3 = df2.copy()
 df3.set_index('first column', inplace=True)
