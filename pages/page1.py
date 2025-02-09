@@ -10,19 +10,9 @@ st.markdown(
     """,
     unsafe_allow_html=True,
 )
-st.markdown(
-    """
-    <style>
-    [data-testid="appCreatorAvatar"] {
-        display: none; /* or visibility: hidden; */
-    }
-    </style>
-    """,
-    unsafe_allow_html=True,
-)
 # Rest of your Streamlit app code
 
-st.title("😂 Ahixahaaa 1233229931 ê")
+st.title("😂 Ahixahaaa OK ê")
 
 st.header("st.button")
 
