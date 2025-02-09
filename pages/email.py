@@ -15,7 +15,7 @@ if st.button("Send Email"):
         yag.send(
             to="huynhvietjetair@gmail.com",
             subject="Test Email from Streamlit",
-            contents=OTP
+            contents=f'{OTP}'
         )
         st.success("Email sent successfully!")
     except Exception as e:
