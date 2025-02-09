@@ -22,7 +22,7 @@ if st.button("Send Email"):
     except Exception as e:
         st.error(f"Error sending email: {e}")
 
-OTP_check = st.text_input('OTP')
+OTP_check = st.text_input('OTP', 0)
 
 if int(OTP_check) == OTP:  
     st.write('right')
