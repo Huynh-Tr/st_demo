@@ -21,7 +21,7 @@ if st.button("Send Email"):
     except Exception as e:
         st.error(f"Error sending email: {e}")
 
-OTP_check = st.chat_input('OTP')
+OTP_check = st.input('OTP')
 
 st.write(OTP_check)
 
