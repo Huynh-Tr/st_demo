@@ -28,4 +28,4 @@ import streamlit as st
 
 import streamlit as st
 
-st.write(st.experimental_user)
+st.experimental_user
