@@ -1,11 +1,15 @@
 import streamlit as st
 
-hide_st_style = """ 
-<style>
-    #MainMenu{visibility: hidden;}
-</style>
-"""
-st.markdown(hide_st_style, unsafe_allow_html=True) 
+st.markdown(
+    """
+    <style>
+    #root > div:nth-child(1) > div.withScreencast > div > header > div.stAppToolbar.st-emotion-cache-15ecox0.e4hpqof2 {
+        visibility: hidden;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
 
 # Rest of your Streamlit app code
 
