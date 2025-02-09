@@ -13,17 +13,7 @@ st.markdown(
 st.markdown(
     """
     <style>
-    #root > div:nth-child(1) > div > div > a {
-        display: none; /* or visibility: hidden; */
-    }
-    </style>
-    """,
-    unsafe_allow_html=True,
-)
-st.markdown(
-    """
-    <style>
-    #root > div:nth-child(1) > div > div > div {
+    #root > div:nth-child(1) > div > div > div > div > a {
         display: none; /* or visibility: hidden; */
     }
     </style>
