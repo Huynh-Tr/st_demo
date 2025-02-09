@@ -4,12 +4,12 @@ import matplotlib.pyplot as plt
 
 # Add custom CSS to hide the GitHub icon
 hide_github_icon = """
-#GithubIcon {visibility: hidden;}
+#MainMenu {visibility: hidden;}
 """
 st.markdown(hide_github_icon, unsafe_allow_html=True)
 
 
-st.title('My first app1')
+st.title('My first app21')
 st.write("Here's our first attempt at using data to create a table:")
 # st.markdown
 # st.header
