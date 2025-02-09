@@ -28,7 +28,12 @@ import streamlit as st
 
 import streamlit as st
 
-if st.experimental_user:
-    st.write(f"User Email: {st.experimental_user["email"]}")
-else:
-    st.write("User is not logged in or is not a workspace member.")
+# if st.experimental_user:
+#     st.write(f"User Email: {st.experimental_user["email"]}")
+# else:
+#     st.write("User is not logged in or is not a workspace member.")
+
+user_email = st.experimental_user.get("email", "Unknown User")
+
+# Display the email in the app 
+st.write(f"Logged in as: {user_email}")
