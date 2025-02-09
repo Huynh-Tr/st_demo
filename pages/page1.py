@@ -3,6 +3,7 @@ import streamlit as st
 hide_st_style = """ 
 <style>
     #MainMenu{visibility: hidden;}
+    #Githubicon{visibility: hidden;}
     #header{visibility: hidden;}
     #footer{visibility: hidden;}
 </style>
