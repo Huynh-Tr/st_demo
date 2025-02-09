@@ -6,6 +6,9 @@ st.markdown(
     #root > div:nth-child(1) > div.withScreencast > div > header > div.stAppToolbar.st-emotion-cache-15ecox0.e4hpqof2 {
         visibility: hidden;
     }
+    #root > div:nth-child(1) > div > div > button {
+       visibility: hidden;
+    }
     </style>
     """,
     unsafe_allow_html=True,
@@ -13,7 +16,7 @@ st.markdown(
 
 # Rest of your Streamlit app code
 
-st.title("😂 Ahixahaaa  ê")
+st.title("😂 Ahixahaaa 222 ê")
 
 st.header("st.button")
 
