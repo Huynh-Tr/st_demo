@@ -41,7 +41,7 @@ if not st.session_state.otp_generated: # Only generate if OTP is not generated y
     OTP = np.random.randint(1000, 9999)
     # np.random.seed(0) # Keep seed for testing purpose. Remove it in production.
     st.session_state.otp = OTP  # Store OTP in session state
-    st.write(OTP)
+    # st.write(OTP)
 
 if st.button("Send Email") and not st.session_state.otp_generated:  # Only send if OTP hasn't been sent.
     try:
