@@ -26,6 +26,6 @@ OTP_check = st.text_input('OTP', 0)
 
 if int(OTP_check) == OTP:  
     st.write('right')
-else:
-    st.write(f'{OTP}')
+# else:
+#     st.write(f'{OTP}')
 
