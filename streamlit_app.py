@@ -2,6 +2,18 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
+
+st.markdown(
+    """
+    <style>
+    .footer-links .github-icon { visibility: hidden; } /* Example: Hides only if both classes are present */
+    footer { visibility: hidden; } /* Hides footer */
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+
+
 st.title('My first app')
 st.write("Here's our first attempt at using data to create a table:")
 # st.markdown
