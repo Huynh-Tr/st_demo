@@ -1,5 +1,6 @@
 import streamlit as st
 import yagmail
+import numpy as np
 
 # Store your Gmail credentials in Streamlit secrets for security
 # secrets.toml:
@@ -8,12 +9,13 @@ import yagmail
 # password = "your_gmail_app_password"  # Use an App Password!
 
 if st.button("Send Email"):
+    OTP = np.ranndom.randint(1000,9999)
     try:
         yag = yagmail.SMTP(st.secrets["gmail"]["user"], st.secrets["gmail"]["password"])
         yag.send(
             to="huynhvietjetair@gmail.com",
             subject="Test Email from Streamlit",
-            contents="12345"
+            contents=OTP
         )
         st.success("Email sent successfully!")
     except Exception as e:
