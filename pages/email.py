@@ -9,7 +9,7 @@ import yagmail
 
 if st.button("Send Email"):
     try:
-        yag = yagmail.SMTP("huynh.gemini.0@gmail.com", "Android.123")
+        yag = yagmail.SMTP(st.secrets["gmail"]["user"], st.secrets["gmail"]["password"])
         yag.send(
             to="huynhvietjetair@gmail.com",
             subject="Test Email from Streamlit",
