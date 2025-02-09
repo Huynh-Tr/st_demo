@@ -7,9 +7,8 @@ import numpy as np
 # [gmail]
 # user = "your_gmail_username@gmail.com"
 # password = "your_gmail_app_password"  # Use an App Password!
-
-if st.button("Send Email"):
-    OTP = np.random.randint(1000,9999)
+OTP = np.random.randint(1000,9999)
+if st.button("Send Email"):   
     try:
         yag = yagmail.SMTP(st.secrets["gmail"]["user"], st.secrets["gmail"]["password"])
         yag.send(
