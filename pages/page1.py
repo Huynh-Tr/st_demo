@@ -10,16 +10,19 @@ st.markdown(
     """,
     unsafe_allow_html=True,
 )
-hide_streamlit_style = """
-            <style>
-            [data-testid="stToolbar"] {visibility: hidden !important;}
-            footer {visibility: hidden !important;}
-            </style>
-            """
-st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+st.markdown(
+    """
+    <style>
+    [data-testid="appCreatorAvatar"] {
+        display: none; /* or visibility: hidden; */
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
 # Rest of your Streamlit app code
 
-st.title("😂 Ahixahaaa 12332231 ê")
+st.title("😂 Ahixahaaa 1233229931 ê")
 
 st.header("st.button")
 
