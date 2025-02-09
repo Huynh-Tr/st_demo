@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
+# Hide the Streamlit menu
 st.markdown(
     """
     <style>
@@ -13,7 +14,7 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-st.title('My first app2124')
+st.title('My first app')
 st.write("Here's our first attempt at using data to create a table:")
 # st.markdown
 # st.header
@@ -38,16 +39,6 @@ df2 = pd.DataFrame({
     'third column': [100, 200, 300, 400]
     })
 
-# create a plot to show on streamlit
-fig, ax = plt.subplots()
-ax.plot(df2['first column'], df2['second column'])
-st.pyplot(fig)
-
-# create a plot by pandas to show on streamlit
-fig2 = df2.plot(x='third column', y='second column')
-st.pyplot(fig2.figure)
-
-
 # create a table to show on streamlit, with the red header, total row and column blue font
 df3 = df2.copy()
 df3.set_index('first column', inplace=True)
@@ -58,8 +49,27 @@ st.table(df3.style.set_table_styles(
      {'selector': 'td', 'props': [('color', 'blue')]}
     ]))
 
+# create a line chart
+chart_data = pd.DataFrame(
+    [[1, 2], [2, 3], [3, 6], [4, 8]],
+    columns=['x', 'y']
+    )
+st.line_chart(chart_data)
+
+# use matplotlib to create a chart
+chart_data = pd.DataFrame(
+    [[1, 2], [2, 3], [3, 6], [4, 8]],
+    columns=['x', 'y']
+    )
+fig, ax = plt.subplots()
+ax.plot(chart_data['x'], chart_data['y'])
+st.pyplot(fig)
 
 st.code('''
 def hello():
     print('Hello, Streamlit!')
+''')
+
+st.markdown('''
+    $$n^1$$
 ''')
