@@ -28,5 +28,4 @@ import streamlit as st
 
 import streamlit as st
 
-if st.experimental_user:
-    st.write(st.experimental_user)
+st.write(st.experimental_user)
