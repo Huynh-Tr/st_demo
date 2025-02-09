@@ -10,4 +10,4 @@ else:
     st.write("Goodbye, world!")
 
 
-st.markdown($$ n_1 = n^1 + 1 $$)
+st.markdown('$$ n_1 = n^1 + 1 $$')
