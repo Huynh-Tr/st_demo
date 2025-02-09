@@ -26,4 +26,4 @@ import streamlit as st
 #         st.session_state.logged_in = False
 #         st.experimental_rerun()  # Refresh the page
 
-st.write(st.experimental_user.email)
+st.write('a')
