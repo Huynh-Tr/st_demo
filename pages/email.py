@@ -22,3 +22,6 @@ if st.button("Send Email"):
         st.error(f"Error sending email: {e}")
 
 OTP_check = st.form('OTP')
+
+st.write(OTP_check)
+
