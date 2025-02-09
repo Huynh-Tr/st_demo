@@ -20,3 +20,5 @@ if st.button("Send Email"):
         st.success("Email sent successfully!")
     except Exception as e:
         st.error(f"Error sending email: {e}")
+
+OTP_check = st.form('OTP')
