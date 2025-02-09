@@ -2,16 +2,16 @@ import streamlit as st
 
 hide_st_style = """ 
 <style>
-    # MainMenu {visibility: hidden;}
-    # header {visibility: hidden;}
-    # footer {visibility: hidden;}
+    # MainMenu{visibility: hidden;}
+    # header{visibility: hidden;}
+    # footer{visibility: hidden;}
 </style>
 """
 st.markdown(hide_st_style, unsafe_allow_html=True) 
 
 # Rest of your Streamlit app code
 
-st.title("😂 Ahi")
+st.title("😂 Ahix")
 
 st.header("st.button")
 
