@@ -2,16 +2,18 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# Add custom CSS to hide the GitHub icon
-hide_all_icon = """
-<style>
-    #MainMenu {visibility: hidden;}
-</style>
-"""
-st.markdown(hide_all_icon, unsafe_allow_html=True)
+st.markdown(
+    """
+    <style>
+    #root > div:nth-child(1) > div.withScreencast > div > header > div.stAppToolbar.st-emotion-cache-15ecox0.e4hpqof2 {
+        visibility: hidden;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
 
-
-st.title('My first app212')
+st.title('My first app2124')
 st.write("Here's our first attempt at using data to create a table:")
 # st.markdown
 # st.header
