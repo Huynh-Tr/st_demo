@@ -24,7 +24,7 @@ if st.button("Send Email"):
 
 OTP_check = st.text_input('OTP')
 st.write(OTP_check)
-if OTP_check == OTP:
+if int(OTP_check) == OTP:
     
     st.write('right')
 # else:
