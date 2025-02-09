@@ -2,6 +2,16 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
+# Inject custom CSS to hide the footer elements
+st.markdown(
+    """
+    <style>
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
 
 st.markdown(
     """
@@ -14,7 +24,7 @@ st.markdown(
 )
 
 
-st.title('My first app')
+st.title('My first app1')
 st.write("Here's our first attempt at using data to create a table:")
 # st.markdown
 # st.header
