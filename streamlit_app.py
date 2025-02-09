@@ -55,7 +55,6 @@ st.table(df3.style.set_table_styles(
      {'selector': 'td', 'props': [('color', 'blue')]}
     ]))
 
-
 st.code('''
 def hello():
     print('Hello, Streamlit!')
