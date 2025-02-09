@@ -28,7 +28,7 @@ import streamlit as st
 
 import streamlit as st
 
-if st.experimental_user:  # Check if user info is available (logged in)
+if st.experimental_user.is_logged_in:  # Check if user info is available (logged in)
     st.write(f"Welcome, {st.experimental_user.email}!")  # Or.name, etc.
     #... your app logic for logged-in users...
 else:
