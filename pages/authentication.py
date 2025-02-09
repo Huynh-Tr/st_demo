@@ -26,13 +26,5 @@ import streamlit as st
 #         st.session_state.logged_in = False
 #         st.experimental_rerun()  # Refresh the page
 
-import streamlit as st
-
-if st.experimental_user.is_logged_in:  # Check if user info is available (logged in)
-    st.write(f"Welcome, {st.experimental_user.email}!")  # Or.name, etc.
-    #... your app logic for logged-in users...
-else:
-    st.write("Please log in to continue.")
-    # You can provide a login link or button here
-    # Example:
-    # st.markdown('<a href="/your_login_page">Log In</a>', unsafe_allow_html=True)
+if st.experimental_user.is_logged_in:
+    st.write(st.experimental_user)
