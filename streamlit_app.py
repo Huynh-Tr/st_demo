@@ -14,6 +14,10 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
+# Hide sidebar
+st.sidebar.empty() 
+
+# App
 st.title('My first app')
 st.write("Here's our first attempt at using data to create a table:")
 # st.markdown
