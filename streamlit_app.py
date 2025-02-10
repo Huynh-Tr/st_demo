@@ -18,9 +18,9 @@ st.markdown(
 st.markdown(
     """
     <style>
-        div[data-testid="collapsedControl"] {
-            visibility: hidden;
-        }
+    #root > div:nth-child(1) > div.withScreencast > div > div > section.stSidebar.st-emotion-cache-vmpjyt.e1c29vlm0 > div.st-emotion-cache-6qob1r.e1c29vlm8 {
+        visibility: hidden;
+    }
     </style>
     """,
     unsafe_allow_html=True
