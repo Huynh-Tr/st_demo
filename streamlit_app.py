@@ -15,7 +15,16 @@ st.markdown(
 )
 
 # Hide sidebar
-st.set_page_config(initial_sidebar_state="collapsed")
+st.markdown(
+    """
+    <style>
+        div[data-testid="collapsedControl"] {
+            visibility: hidden;
+        }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 # App
 st.title('My first app')
