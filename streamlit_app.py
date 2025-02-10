@@ -15,7 +15,7 @@ st.markdown(
 )
 
 # Hide sidebar
-st.sidebar.empty() 
+st.set_page_config(initial_sidebar_state="collapsed")
 
 # App
 st.title('My first app')
