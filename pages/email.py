@@ -42,12 +42,13 @@ if not st.session_state.otp_generated: # Only generate if OTP is not generated y
     # np.random.seed(0) # Keep seed for testing purpose. Remove it in production.
     st.session_state.otp = OTP  # Store OTP in session state
     # st.write(OTP)
-
+st.write('fill out the email')
+send_to_email = st.form('email')
 if st.button("Send Email") and not st.session_state.otp_generated:  # Only send if OTP hasn't been sent.
     try:
         yag = yagmail.SMTP(st.secrets["gmail"]["user"], st.secrets["gmail"]["password"])
         yag.send(
-            to="huynhvietjetair@gmail.com",
+            to=send_to_email,
             subject="Test Email from Streamlit",
             contents=f'{st.session_state.otp}'  # Use the stored OTP
         )
