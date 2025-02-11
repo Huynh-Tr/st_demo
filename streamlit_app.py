@@ -2,62 +2,87 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# Add custom CSS to hide the GitHub icon
-hide_github_icon = """
-#GithubIcon {
-  visibility: hidden;
-}
-"""
-st.markdown(hide_github_icon, unsafe_allow_html=True)
+# Hide the Streamlit menu
+st.markdown(
+    """
+    <style>
+    #root > div:nth-child(1) > div.withScreencast > div > header > div.stAppToolbar.st-emotion-cache-15ecox0.e4hpqof2 {
+        visibility: hidden;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
 
-# Add custom CSS to hide the GitHub icon
-hide_all_icon = """
-#MainMenu {
-  visibility: hidden;
-}
-"""
-st.markdown(hide_all_icon, unsafe_allow_html=True)
+# withd and height of the page
+import streamlit as st
 
-st.title('My first app')
+# title in the center of the page
+st.title('Report')
+st.divider()
+st.header('Operation PnL')
+st.subheader('Period: 2025-01-01 to 2025-01-31')
+# create a blank line
+st.write('')
 st.write("Here's our first attempt at using data to create a table:")
-# st.markdown
-# st.header
-# st.subheader
-# st.caption
-# st.text
-# st.latex
-# st.code
 
-st.button('Say hello')
+def df():
+    # create a dataframe with 5 columns and 10 rows
+    return pd.DataFrame({
+        'first column': list(range(1, 11)),
+        'second column': list(range(11, 21)),
+        'third column': [""] * 10,
+        'fourth column': list(range(31, 41)),
+        'fifth column': list(range(41, 51))
+    }, index=list('abcdefghij'))
+    
+# divide the screen into two parts
+# left_column, right_column = st.columns(2)
+# pressed = left_column.button('Press me?')
+# if pressed:
+#     left_column.write("Woohoo!")
+# else:
+#     left_column.write("Press the button")
 
-df = pd.DataFrame({
-    'first column': [1, 2, 3, 4],
-    'second column': [10, 20, 30, 40]
-    })
+# expander = st.expander("FAQ")
 
-st.write('Below is a df', df, 'Above is a df')
+# expander.write("Here you could put in some really, really long explanations...")
+# value = ('Email', 'Home phone', 'Mobile phone', 'Pager', 'Fax')
+# right_column.selectbox('How would you like to be contacted?', value)
 
-df2 = pd.DataFrame({
-    'first column': ['a', 'b', 'c', 'd'],
-    'second column': [10, 20, 30, 40],
-    'third column': [100, 200, 300, 400]
-    })
+# multi = right_column.multiselect('Where are you now?', ['Home', 'Office', 'Remote'])
 
-# create a table to show on streamlit, with the red header, total row and column blue font
-df3 = df2.copy()
-df3.set_index('first column', inplace=True)
-df3.loc['Total'] = df3.sum()
-df3['Total'] = df3.sum(axis=1)
-st.table(df3.style.set_table_styles(
-    [{'selector': 'th', 'props': [('background', 'red'), ('color', 'black')]},
-     {'selector': 'td', 'props': [('color', 'blue')]}
-    ]))
+# set style for the dataframe: add color to the cells
+df1 = (df()
+    .style.bar(subset=['first column', 'second column'], color='red')
+    .applymap(lambda x: 'color: red' if x > 35 else '', subset='fourth column')
+    # hide index of the dataframe
+    
+    
+)
 
-st.code('''
-def hello():
-    print('Hello, Streamlit!')
-''')
+# set percentage format for the dataframe
+# df1 = df1.style.format("{:.2%}")
 
-st.latex(r'''
-    $$n^1$$
-''')
+st.table(df1)
+
+# df1 = df().style.bar(subset=['first', 'second'], color='#d65f5f', width=100)
+
+st.dataframe(df1, hide_index=True, )
+
+
+# create a line chart
+chart_data = pd.DataFrame(
+    [[1, 2], [2, 3], [3, 6], [4, 8]],
+    columns=['x', 'y']
+    )
+st.line_chart(chart_data)
+
+# use matplotlib to create a chart
+chart_data = pd.DataFrame(
+    [[1, 2], [2, 3], [3, 6], [4, 8]],
+    columns=['x', 'y']
+    )
+fig, ax = plt.subplots()
+ax.plot(chart_data['x'], chart_data['y'])
+st.pyplot(fig)
