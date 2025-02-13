@@ -12,7 +12,7 @@ st.set_page_config(layout = 'wide')
 
 # SharePoint and Folder urls
 sharepoint_url = r'https://pnjcomvn.sharepoint.com/sites/HuynhTN'
-folder_in_sharepoint = "/sites/HuynhTN/Shared Documents/Data/DataBI/Dthu"
+folder_in_sharepoint = r"/sites/HuynhTN/Shared Documents/Data/DataBI/Dthu"
 
 # # First section: e-mail and password as input
 # placeholder = st.empty()
